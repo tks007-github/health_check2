@@ -1,8 +1,9 @@
-from django.contrib import admin
 from django.urls import path
-from .views import loginview
 
+from . import views
+
+
+app_name = 'record_post'
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('login/', loginview, name='login'),
+    path('', views.IndexView.as_view(), name="index"),
 ]
